@@ -6,7 +6,7 @@ namespace graph {
 
     Graph::Graph(int vertices, bool weightedGraph, bool directedGraph)
     : numVertices(vertices), weighted(weightedGraph), directed(directedGraph) {
-    adjacencyList.resize(vertices, nullptr); // אתחול הרשימה עם גודל מתאים
+    adjacencyList.resize(vertices, nullptr); 
 }
 
     
@@ -41,7 +41,7 @@ namespace graph {
         }
     }
 
-    // הדפסת הגרף
+    
     void Graph::print_graph() const {
         for (int i = 0; i < numVertices; ++i) {
             std::cout << "Vertex " << i << " -> ";
@@ -54,7 +54,7 @@ namespace graph {
         }
     }
     void Graph::removeEdge(int u, int v) {
-        // הסרת קשת מהרשימה של הקודקוד u
+        
         Edge* current = adjacencyList[u];
         Edge* prev = nullptr;
         while (current != nullptr) {
@@ -72,7 +72,7 @@ namespace graph {
             current = current->next;
         }
     
-        // אם הגרף לא מכוון, גם נמחק את הקשת בכיוון ההפוך
+        
         if (!directed) {
             current = adjacencyList[v];
             prev = nullptr;
