@@ -17,7 +17,7 @@ namespace graph {
 
     class Graph {
     public:
-        // קונסטרוקטור עם פרמטרים למספר קודקודים, משקל וכיווניות
+        
         Graph(int vertices = 0, bool weightedGraph = false, bool directedGraph = false);
 
         ~Graph();
@@ -36,7 +36,7 @@ namespace graph {
         int numVertices;
         bool weighted;
         bool directed;
-        std::vector<Edge*> adjacencyList; // רשימת שכנות
+        std::vector<Edge*> adjacencyList;
     };
 
 }
