@@ -60,7 +60,7 @@ namespace graph {
         while (current != nullptr) {
             if (current->destination == v) {
                 if (prev == nullptr) {
-                    // אם הקשת היא הראשונה ברשימה
+                    
                     adjacencyList[u] = current->next;
                 } else {
                     prev->next = current->next;
