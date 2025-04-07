@@ -69,7 +69,7 @@ TEST_CASE("Dijkstra") {
 
     Graph tree = Algorithms::dijkstra(g, 0);
 
-    // Verify the structure of the Dijkstra tree
+    
     CHECK(tree.isAdjacent(0, 1) == true);
     CHECK(tree.isAdjacent(1, 3) == true);
     CHECK(tree.isAdjacent(3, 4) == true);
@@ -87,7 +87,7 @@ TEST_CASE("Prim") {
 
     Graph tree = Algorithms::prim(g);
 
-    // Verify the structure of the Prim tree
+    
     CHECK(tree.isAdjacent(0, 2) == true);
     CHECK(tree.isAdjacent(1, 3) == true);
     CHECK(tree.isAdjacent(3, 4) == true);
@@ -105,16 +105,15 @@ TEST_CASE("Kruskal") {
 
     Graph tree = Algorithms::kruskal(g);
 
-    // Verify the structure of the Kruskal tree
+    
     CHECK(tree.isAdjacent(0, 2) == true);
     CHECK(tree.isAdjacent(1, 3) == true);
     CHECK(tree.isAdjacent(3, 4) == true);
 }
 TEST_CASE("Graph Helper Functions") {
     Graph g;
-    g.loadGraph(5, false, false);  // גרף לא מכוון, לא משוקלל
+    g.loadGraph(5, false, false);  
     
-    // נוסיף כמה קשתות
     g.addEdge(0, 1);
     g.addEdge(1, 2);
     g.addEdge(2, 3);
